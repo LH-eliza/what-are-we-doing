@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out items to the edges */
+  padding: 20px;
+  background-color: white;
+  font-family: "Jua", sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-item {
+  padding: 0px 15px;
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-item.logo {
+  color: #d68452;
+  font-size: 24px;
+}

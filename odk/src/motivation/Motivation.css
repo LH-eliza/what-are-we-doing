@@ -1,0 +1,85 @@
+.motivation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 20px;
+  margin: 0 20px;
+  font-family: "Jua", sans-serif;
+}
+
+.motivation-text {
+  flex: 1;
+  text-align: left;
+}
+
+.motivation-title {
+  font-size: 2.5rem;
+  color: #6b90d8;
+  margin-bottom: 10px;
+}
+
+.motivation-description {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.motivation-images {
+  display: flex;
+  justify-content: right;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.motivation-image {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  margin: 10px;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .motivation-container {
+    flex-direction: row;
+    margin: 0 50px;
+  }
+
+  .motivation-title {
+    font-size: 3rem;
+  }
+
+  .motivation-description {
+    font-size: 1.8rem;
+  }
+
+  .motivation-images {
+    justify-content: flex-end;
+  }
+
+  .motivation-image {
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .motivation-container {
+    margin: 0 150px;
+  }
+
+  .motivation-title {
+    font-size: 3.5rem;
+  }
+
+  .motivation-description {
+    font-size: 2.2rem;
+  }
+
+  .motivation-image {
+    width: 400px;
+    margin-left: 70px;
+  }
+}

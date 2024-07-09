@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+.hero {
+  text-align: center;
+  padding: 20px;
+  font-family: "Jua", sans-serif;
+}
+
+.odk {
+  color: #c3c3c3;
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #e9926d;
+}
+
+.doing {
+  color: #6b90d8;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #6b90d8;
+}
+
+.japan,
+.korea {
+  color: #e9926d;
+}
+
+.countdown-timer {
+  color: #e9926d;
+  margin: 0;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown {
+  display: inline-block;
+  border: 5px solid #e9926d;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: "Jost";
+  color: #6b90d8;
+  margin: 10px 0;
+}
+
+.countdown span {
+  margin: 0 5px;
+}
+
+.countdown-image {
+  padding: 20px;
+}
+
+.horizontal-line {
+  border: 5px solid #6b90d8;
+  margin: 20px 0;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .odk {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .countdown-container {
+    flex-direction: row;
+  }
+
+  .countdown {
+    padding: 15px 25px;
+    font-size: 35px;
+    margin: 0 10px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .odk {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .countdown {
+    padding: 20px 30px;
+    font-size: 40px;
+    margin: 0 20px;
+  }
+}
