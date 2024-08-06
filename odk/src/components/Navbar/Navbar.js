@@ -14,9 +14,12 @@ function Navbar() {
         <a href="https://www.youtube.com/@grungylh" className="navbar-item">
           VIDEO UPLOADS
         </a>
-        <Link to="/upload" className="navbar-item">
-          DAILY PHOTOS
-        </Link>
+        <a
+          href="https://drive.google.com/drive/folders/1YE8Q3rynr9q0EuoY7wqqGvSpcDOBlsMf?usp=drive_link"
+          className="navbar-item"
+        >
+          PHOTO UPLOADS
+        </a>
       </div>
     </div>
   );
