@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import confetti from "canvas-confetti";
 import "./Hero.css";
 import Bob from "./images/Bob.svg";
 import Joey from "./images/Joey.svg";
@@ -27,7 +28,18 @@ const Hero = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
+
+      if (
+        newTimeLeft.days === 0 &&
+        newTimeLeft.hours === 0 &&
+        newTimeLeft.minutes === 0 &&
+        newTimeLeft.seconds === 0
+      ) {
+        confetti();
+        clearInterval(timer);
+      }
     }, 1000);
 
     return () => clearInterval(timer);

@@ -1,17 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="logo-container">
-        <div className="navbar-item logo">ODKSOUP</div>
+        <Link to="/" className="navbar-item logo">
+          ODKSOUP
+        </Link>
       </div>
       <div className="navbar-items">
-        <div className="navbar-item">COUNTDOWN</div>
-        <div className="navbar-item">PHOTOS</div>
-        <div className="navbar-item">VIDEOS</div>
-        <div className="navbar-item">ITINERARY</div>
+        <a href="https://www.youtube.com/@grungylh" className="navbar-item">
+          VIDEO UPLOADS
+        </a>
+        <Link to="/upload" className="navbar-item">
+          DAILY PHOTOS
+        </Link>
       </div>
     </div>
   );
