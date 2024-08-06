@@ -1,0 +1,56 @@
+.Upload {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.upload-section {
+  margin: 20px;
+}
+
+.upload-section input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.upload-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  background-color: #0056b3;
+}
+
+.photos-section {
+  margin: 20px;
+}
+
+.day-section {
+  margin: 20px 0;
+}
+
+.photos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.photo-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 150px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+}
+
+.photo-card p {
+  margin: 5px 0;
+}
