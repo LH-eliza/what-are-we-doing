@@ -19,25 +19,24 @@ const Hero = () => {
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+    } else {
+      timeLeft = null; // Timer has reached zero
     }
 
     return timeLeft;
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timerFinished, setTimerFinished] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
 
-      if (
-        newTimeLeft.days === 0 &&
-        newTimeLeft.hours === 0 &&
-        newTimeLeft.minutes === 0 &&
-        newTimeLeft.seconds === 0
-      ) {
+      if (newTimeLeft === null) {
         confetti();
+        setTimerFinished(true);
         clearInterval(timer);
       }
     }, 1000);
@@ -60,10 +59,16 @@ const Hero = () => {
         <div className="countdown-container">
           <img src={Bob} alt="Left" className="countdown-image left" />
           <div className="countdown">
-            <span>{timeLeft.days} DAYS</span>
-            <span>{timeLeft.hours} HOUR(S)</span>
-            <span>{timeLeft.minutes} MIN</span>
-            <span>{timeLeft.seconds} SEC</span>
+            {timerFinished ? (
+              <span className="celebration-message">We made it!</span>
+            ) : (
+              <>
+                <span>{timeLeft?.days} DAYS</span>
+                <span>{timeLeft?.hours} HOUR(S)</span>
+                <span>{timeLeft?.minutes} MIN</span>
+                <span>{timeLeft?.seconds} SEC</span>
+              </>
+            )}
           </div>
           <img src={Joey} alt="Right" className="countdown-image right" />
         </div>
